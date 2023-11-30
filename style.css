@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  --primary: hsl(234, 12%, 34%);
+  --secondary: hsl(229, 6%, 66%);
+  --tertiary: hsl(0, 0%, 98%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  min-height: 100vh;
+  padding: 6rem 0;
+  background-color: var(--tertiary);
+}
+img {
+  max-width: 100%;
+}
+p {
+  line-height: 1.5;
+}
+h1 {
+  font-size: 3.6rem;
+  text-align: center;
+}
+.title {
+  font-weight: 200;
+}
+.title span {
+  display: block;
+  font-weight: 600;
+}
+.description {
+  text-align: center;
+  margin: 2rem auto;
+  color: var(--secondary);
+}
+.description span {
+  display: block;
+  margin-bottom: 4rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.card {
+  padding: 4rem;
+  box-shadow: 0.2rem 0.2rem 3rem 0.1rem var(--secondary);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  max-width: 100%;
+}
+.card h2 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+.card p {
+  color: var(--secondary);
+  margin-bottom: 4rem;
+}
+.supervisor {
+  border-top: 0.4rem solid var(--cyan);
+}
+.team {
+  border-top: 0.4rem solid var(--red);
+}
+.karma {
+  border-top: 0.4rem solid var(--orange);
+}
+.calculator {
+  border-top: 0.4rem solid var(--blue);
+}
+.card img {
+  align-self: flex-end;
+}
+.card-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card-vertical {
+    width: 100%;
+  }
+  .description span {
+    display: inline;
+  }
+}
